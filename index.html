@@ -1,16 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Gradient Background</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Gradient Background</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body id = "gradient">
-	<h1>Cool Generator</h1>
-	<input class="color1" type="color" name="color1" value="#00ff00">
-	<input class="color2" type="color" name="color2" value="#ff0000">
-	<h2>This is the Background</h2>
-	<h3></h3>
 
-<script type="text/javascript" src="script.js"></script>
+<body id="gradient">
+    <div class="message" hidden>Copied!</div>
+    <h1>Background Generator</h1>
+    <div class="container">
+        <input class="color1" type="color" name="color1" value="#FF0000">
+		<input class="color2" type="color" name="color2" value="#FFF200">
+        <input class="color3" type="color" name="color3" value="#1E9600">
+        <div id="direction"></div>
+    </div>
+    <h2>Current CSS Background</h2>
+    <div class="clipboard">
+        <code id="lgcode">linear-gradient(to right, #ff0000, #fff200, #1e9600);</code>
+    </div>
+    <button class="clipboard-btn" onclick="copyToClipboard()" title="copy to clipboard">
+        <i class="far fa-copy"></i>
+    </button>
+    
+    <script type="text/javascript" src="script.js"></script>
+    <script>
+        const direction = {
+            DOMselector: '#direction',
+            sliders: [
+                {
+                    radius: 30,
+                    min: 0,
+                    max: 360,
+                    step: 1,
+                    initialValue: 90,
+                    color: 'rgba(0, 0, 0, 0.75)'
+                }
+            ]
+        };
+
+        const slider = new Slider(direction);
+        slider.draw();
+    </script>
+
 </body>
+
 </html>

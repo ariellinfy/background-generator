@@ -1,27 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&display=swap');
+
+body,html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-	font: 'Raleway', sans-serif;
+	font-family: 'El Messiri', sans-serif;
     color: rgba(0,0,0,.5);
     text-align: center;
     text-transform: uppercase;
     letter-spacing: .5em;
     top: 15%;
-	background: linear-gradient(to right, red , yellow); /* Standard syntax */
+    background: linear-gradient(to right, #ff0000, #fff200, #1e9600); /* Standard syntax */
+    width: 100%;
+    min-width: 100vw;
+    height: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.message {
+    align-self: flex-end;
+    margin: 1em;
+    position: fixed;
+    background-color: rgba(218, 218, 218, 0.5);
+    border-radius: 0.25em;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    text-transform: none;
+    color: rgba(0, 0, 0, 0.85);
+    padding: 0.3em 0.5em 0.2em 0.5em;
 }
 
 h1 {
-    font: 600 3.5em 'Raleway', sans-serif;
-    color: rgba(0,0,0,.5);
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: .5em;
-    width: 100%;
+    font-size: 3.5em;
+    font-weight: 700;
+    letter-spacing: .3em;
+    margin: 1.5em 5% 0.8em 5%;
 }
 
-h3 {
-	font: 900 1em 'Raleway', sans-serif;
-    color: rgba(0,0,0,.5);
-    text-align: center;
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    width: 5em;
+    height: 2.5em;
+    margin: 0 1em;
+}
+
+#direction {
+    margin: 0 1em;
+}
+
+h2 {
+    margin: 1.5em 5% 1.5em 5%;
+    font-weight: 600;
+    font-size: 2em;
+    color: rgba(0,0,0,.65);
+}
+
+.clipboard {
+    width: fit-content;
+    height: fit-content;
+    border-radius: 0.2em;
+    background-color: rgba(0,0,0,.1);
+    padding: 1em;
+    margin: 0 5% 1em 5%;
+    box-shadow: 0 0 1em 0.1em rgba(0,0,0,.18);
+}
+
+.clipboard-btn {
+    border: none;
+    cursor: pointer;
+    font-size: 2em;
+    background-color: rgba(0,0,0,0);
+    color: rgba(0,0,0,.7);
+    padding: 0.2em;
+    margin: 0.2em;
+}
+
+.clipboard-btn:hover, .clipboard-btn:active {
+    color: black;
+}
+
+#lgcode {
+	font-size: 1.75em;
+    color: rgba(0,0,0,.7);
     text-transform: none;
     letter-spacing: 0.01em;
+    font-weight: 600;
+    text-shadow: 0 0 0.2em rgba(0,0,0,.3);
+}
 
+@media screen and (max-width: 1400px) {
+    h1 {
+        font-size: 2.75em;
+        letter-spacing: .2em;
+        margin: 1.5em 5% 0.5em 5%;
+    }
+
+    h2 {
+        font-size: 1.65em;
+        margin: 1em 5% 1em 5%;
+    }
+    
+    #lgcode {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    h1 {
+        font-size: 2.5em;
+        margin: 1.25em 2.5% 0.35em 2.5%;
+    }
+
+    h2 {
+        font-size: 1.4em;
+        margin: 0.5em 4% 1em 4%;
+    }
+
+    .clipboard {
+        padding: 0.65em;
+        margin: 0 3% 0.65em 3%;
+    }
+
+    #lgcode {
+        font-size: 1.2em;
+    }
 }
