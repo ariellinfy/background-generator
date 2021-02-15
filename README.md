@@ -1,6 +1,6 @@
 # Background Generator
 
-![Background generator Cover](public/app-cover.png)
+![Background generator Cover](./app-cover.png)
 
 ## About
 
